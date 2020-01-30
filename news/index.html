@@ -255,6 +255,13 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#waiwera-11-released" class="md-nav__link">
+    Waiwera 1.1 released
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#waiwera-10-released" class="md-nav__link">
     Waiwera 1.0 released
   </a>
@@ -365,6 +372,13 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#waiwera-11-released" class="md-nav__link">
+    Waiwera 1.1 released
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#waiwera-10-released" class="md-nav__link">
     Waiwera 1.0 released
   </a>
@@ -389,6 +403,35 @@
                 
                 
                 <h1 id="whats-new">What's new?<a class="headerlink" href="#whats-new" title="Permanent link">&para;</a></h1>
+<h2 id="waiwera-11-released">Waiwera 1.1 released<a class="headerlink" href="#waiwera-11-released" title="Permanent link">&para;</a></h2>
+<p><strong>31 January 2020</strong> - Waiwera version 1.1 is now released. This is a significant update and includes the following changes:</p>
+<ul>
+<li><strong>MINC mesh rebalancing</strong>: after MINC processing, the mesh is
+  redistributed to regain optimal load balancing, and hence better
+  scaling behaviour for large parallel MINC problems. This entailed a
+  substantial rewrite of parts of the Waiwera MINC code.</li>
+<li><strong>PETSc update</strong>: PETSc version 3.12 or later is now required (some
+  of its new features and bugfixes are needed for the MINC mesh
+  rebalancing). If PETSc is not found on the system, version 3.12.3
+  will be downloaded and built.</li>
+<li><strong>PyWaiwera</strong>: this is a new Python library for working with Waiwera
+  simulations. Its source is in the main Waiwera source tree under
+  <code>/utils/pywaiwera</code>, and it can be installed from PyPI using
+  <code>pip</code>. For now, it contains only code related to running Waiwera via
+  Docker, either from Python scripts or from the command line, for
+  which it installs an executable <code>waiwera-dkr</code> script (which replaces
+  the previous <code>waiwera-dkr.py</code> script). In future it is invisaged
+  that other modules will be added to PyWaiwera, for assisting with
+  pre- and post-processing.</li>
+<li>the new <strong><code>waiwera-dkr</code></strong> script includes many improvements and some
+  new features, for example downloading example model input files
+  using the <code>--examples</code> option.</li>
+<li><strong>continuous integration</strong> (CI) using <a href="https://travis-ci.org/">Travis</a>
+  for automated building/testing of Waiwera.</li>
+<li>additional <strong>log file</strong> messages for reporting simulation degrees of
+  freedom and imbalance statistics, as well as linear solver iteration
+  counts</li>
+</ul>
 <h2 id="waiwera-10-released">Waiwera 1.0 released<a class="headerlink" href="#waiwera-10-released" title="Permanent link">&para;</a></h2>
 <p><strong>24 November 2019</strong> - Waiwera version 1.0 has just been released, after five years of development and testing.</p>
 <p>The Waiwera team would like to thank everyone who contributed to making this possible, including <a href="https://www.mbie.govt.nz/">MBIE</a> and <a href="https://contact.co.nz/">Contact Energy</a> for financial support; Matt Knepley and others on the <a href="https://www.mcs.anl.gov/petsc/">PETSc</a> team, for invaluable advice and support; and <a href="https://github.com/josephalevin">Joseph Levin</a> for developing the <a href="https://github.com/josephalevin/fson">FSON</a> library.</p>
