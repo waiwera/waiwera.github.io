@@ -255,6 +255,13 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#waiwera-130-released" class="md-nav__link">
+    Waiwera 1.3.0 released
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#waiwera-121-released" class="md-nav__link">
     Waiwera 1.2.1 released
   </a>
@@ -393,6 +400,13 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#waiwera-130-released" class="md-nav__link">
+    Waiwera 1.3.0 released
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#waiwera-121-released" class="md-nav__link">
     Waiwera 1.2.1 released
   </a>
@@ -445,6 +459,59 @@
                 
                 
                 <h1 id="whats-new">What's new?<a class="headerlink" href="#whats-new" title="Permanent link">&para;</a></h1>
+<h2 id="waiwera-130-released">Waiwera 1.3.0 released<a class="headerlink" href="#waiwera-130-released" title="Permanent link">&para;</a></h2>
+<p><strong>8 September 2021</strong> - Waiwera version 1.3.0 is now released.</p>
+<p>The changes in this version include:</p>
+<ul>
+<li>
+<p><strong>tracers</strong> - Waiwera can now simulate passive tracers. Any number
+  of tracers can be simulated, in conjunction with any equation of
+  state. Tracers may be either liquid-phase or vapour-phase, and the
+  effects of diffusion and decay can be included. Decay can be
+  constant or temperature-dependent. The tracer equations are solved
+  independently of the flow equations, with only one additional linear
+  solve needed per time step.</p>
+</li>
+<li>
+<p><strong>output at faces</strong> - Waiwera can now optionally output results on
+  mesh faces, e.g. component or phase mass or energy fluxes, and also
+  face geometry (areas etc.) to the output HDF5 file. Face output is
+  fully configurable by the user. It is also now possible to control
+  (e.g. omit) the output of cell geometry data.</p>
+</li>
+<li>
+<p><strong>PETSc update</strong> - PETSc version 3.15.2 or later is now required,
+  and PETSc 3.15.4 will be downloaded and built if PETSc is not found
+  on the system.</p>
+</li>
+<li>
+<p>new output datasets in the HDF5 file to simplify post-processing
+  <strong>MINC</strong> simulations - these contain the MINC level and parent cell
+  index for each cell in the output</p>
+</li>
+<li>
+<p>the Waiwera <strong>Docker</strong> images should now run on older
+  CPUs. Previously the Docker images contained a PETSc library built
+  using compiler settings which prevented it from running on older
+  CPUs. This is now built using more generic settings so it should run
+  on any x86 CPU capable of running Docker.</p>
+</li>
+<li>
+<p>a fix for a minor issue which prevented <strong>native Linux builds</strong> on
+  distributions which no longer have Python 2 installed by default
+  (e.g. Ubuntu 20.04)</p>
+</li>
+<li>
+<p>the user guide has new material on using the recently-released
+  <a href="https://github.com/acroucher/layermesh">Layermesh</a> library to
+  create meshes for Waiwera models, and use them for pre- and
+  post-processing</p>
+</li>
+<li>
+<p>the Waiwera <strong>continuous integration</strong> (CI) pipeline has been
+  transferred from Travis CI to Github Actions</p>
+</li>
+</ul>
 <h2 id="waiwera-121-released">Waiwera 1.2.1 released<a class="headerlink" href="#waiwera-121-released" title="Permanent link">&para;</a></h2>
 <p><strong>20 July 2020</strong> - Waiwera version 1.2.1 is now released.</p>
 <p>The main change in this version is that the installation process will
